@@ -2196,6 +2196,7 @@ WEBVIEW_API void webview_set_color(struct webview *w, uint8_t r, uint8_t g,
   objc_msgSend(w->priv.window, sel_registerName("setOpaque:"), 0);
   objc_msgSend(w->priv.window,
                sel_registerName("setTitlebarAppearsTransparent:"), 1);
+  objc_msgSend(w->priv.webview, sel_registerName("_setDrawsBackground:"), 0);
 }
 
 WEBVIEW_API void webview_dialog(struct webview *w,
